@@ -72,7 +72,7 @@
     </tbody>
 </table>
 -->
-<!--Quinta Parte De La Practica-->
+<!--Quinta Parte De La Practica
 <div style="text-align:center">
 <h3>{{nombre_componentes}}</h3>
 <h3>Color Switch</h3>
@@ -101,3 +101,20 @@
      Este Es Color Rosado</li>
  </ul>
 </div>
+-->
+<!--Sexta Parte De La Practica-->
+<h3>Selector De Colores</h3>
+<input type="text" [(ngModel)]="color_seleccionado">
+<pre>
+    <strong>Color Elegido:</strong>
+    {{color_seleccionado}}
+</pre>
+<div [ngStyle]=" {
+    'background':color_seleccionado,
+    'width': '200px',
+    'height': '200px',
+    'float': 'right',
+    'margin-right': '45%'
+}"
+></div>
+<div style="clear:both"></div>

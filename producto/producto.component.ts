@@ -24,11 +24,17 @@ export class ProductoComponent implements OnInit {
   public arreglo2:Array<string>;
   public varios:Array<any>;
   */
- // Tecera Parte De La Parctica
+ /* Tecera Parte De La Parctica
   public nombre_componentes = "Componente Producto";
   public pro!: Producto;
   public inventario!:Array<Producto>;
+  public color!:string;*/
+  //Sexta Parte De La Practica
+  public titulo = 'Componente Producto';
+  public pro!:Producto;
+  public inventario!:Array<Producto>;
   public color!:string;
+  public color_seleccionado!:string;
 
   constructor() {
     /* Segunda Parte De La Practica
@@ -38,7 +44,7 @@ export class ProductoComponent implements OnInit {
     this.varios = [1,'Julian',true];
     this.saludo();
     */
-   //Cuarta Parte De La Practica
+   /*Cuarta Parte De La Practica
     this.color = "green";  
     this.pro = new Producto('Tenis', 30, 'Caja', true);
     this.inventario = [
@@ -46,7 +52,9 @@ export class ProductoComponent implements OnInit {
       new Producto('Maquillaje', 3, 'Estuche', true),
       new Producto('Boxer', 3, 'Bolsa', true),
       new Producto('Jean', 2, 'Tula', true)
-    ];
+    ];*/
+    //Sexta Parte De La Practica
+    this.color_seleccionado = "#ccc";
    }
    /* Tercera Parte De La Practica
    saludo(){
@@ -71,13 +79,13 @@ export class ProductoComponent implements OnInit {
       new Producto('Boxer', 3, 'Bolsa', true),
       new Producto('Jean', 2, 'Tula', true)
     ];*/
-  }
-  //Cuarta Parte De La Practica
+  /*}
+  Cuarta Parte De La Practica
   cambiarvalor1(valor: boolean){
     this.inventario[2].estado= valor;
   }
   cambiarvalor2(valor: boolean){
-    this.inventario[2].estado= valor;
+    this.inventario[2].estado= valor;*/
   }
 
 }
