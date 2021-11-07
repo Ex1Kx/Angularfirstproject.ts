@@ -1,6 +1,120 @@
+<!-- Primera Parte De La Practica
 <h2>{{nombre_componentes}}</h2>
 <p>{{listado_productos}}</p>
 <p>{{nombre}}</p>
 <p>{{dia}}, {{numero}}</p>
 <p>{{arreglo1}}, {{arreglo2}}</p>
 <p>{{varios}}</p>
+-->
+<!-- Segunda Parte De La Practica
+<h2>{{nombre_componente}}</h2>
+<p>{{listado_productos}}</p>
+<p>{{arreglo2}}</p>
+<p>{{varios}}</p>
+-->
+<!-- Tercera Parte De La Practica 
+<h2>{{nombre_componentes}}</h2>
+<section>
+    <p>Productos En Descuento</p>
+    <ul>
+        <li>{{inventario[2].nombrepro}}</li>
+        <li>{{inventario[2].cantidadexi}}</li>
+        <li>{{inventario[2].embalaje}}</li>
+    </ul>
+</section>
+-->
+<!--Cuarta Parte De La Parctica
+<div style="text-align:center">
+    <h3>{{nombre_componentes}}</h3>
+    <p><strong>Producto en descuento</strong></p>
+</div>
+<button (click)="cambiarvalor1(true)">Mostrar</button>
+<hr />
+<ul *ngIf="inventario[2].estado == true">
+    <li>{{inventario[2].nombrepro}}</li>
+    <li>{{inventario[2].cantidadexi}}</li>
+    <li>{{inventario[2].embalaje}}</li>
+</ul>
+<ul *ngIf="inventario[3].estado !== false">
+    <li>{{inventario[3].nombrepro}}</li>
+    <li>{{inventario[3].cantidadexi}}</li>
+    <li>{{inventario[3].embalaje}}</li>
+</ul>
+<button (click)="cambiarvalor2(false)">Ocultar</button>
+
+<h3>Listado De Productos</h3>
+<ul>
+    <li *ngFor="let pro  of inventario">
+        <ul>
+            <li>{{pro.nombrepro}}</li>
+            <li>{{pro.cantidadexi}}</li>
+            <li>{{pro.embalaje}}</li>
+            <li *ngIf="pro.estado == true">Activo</li>
+        </ul>
+    </li>
+</ul>
+<table>
+    <thead>
+        <tr>
+            <th>Nombre Del Producto</th>
+            <th>Cantidad</th>
+            <th>Empaque</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pro of inventario; let i = index">
+            <td>{{pro.nombrepro}}</td>
+            <td>{{pro.cantidadexi}}</td>
+            <td>{{pro.embalaje}}</td>
+            <td *ngIf="pro.estado == true">Activo</td>
+        </tr>
+    </tbody>
+</table>
+-->
+<!--Quinta Parte De La Practica
+<div style="text-align:center">
+<h3>{{nombre_componentes}}</h3>
+<h3>Color Switch</h3>
+<ul [ngSwitch]="color">
+   <li *ngSwitchCase="'red'"[ngStyle]=" {
+       'background':color,
+       'color': 'white',
+       'padding': '20px'
+   }">
+    Este Es Color Rojo</li>
+</ul>
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase="'green'"[ngStyle]=" {
+        'background':color,
+        'color': 'white',
+        'padding': '20px'
+    }">
+     Este Es Color Verde</li>
+ </ul>
+ <ul [ngSwitch]="color">
+    <li *ngSwitchCase="'pink'"[ngStyle]=" {
+        'background':color,
+        'color': 'white',
+        'padding': '20px'
+    }">
+     Este Es Color Rosado</li>
+ </ul>
+</div>
+-->
+<!--Sexta Parte De La Practica-->
+<h3>Selector De Colores</h3>
+<input type="text" [(ngModel)]="color_seleccionado">
+<pre>
+    <strong>Color Elegido:</strong>
+    {{color_seleccionado}}
+</pre>
+<div [ngStyle]=" {
+    'background':color_seleccionado,
+    'width': '200px',
+    'height': '200px',
+    'float': 'right',
+    'margin-right': '45%'
+}"
+></div>
+<div style="clear:both"></div>
