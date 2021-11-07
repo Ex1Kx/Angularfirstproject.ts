@@ -37,6 +37,14 @@ export class ProductoComponent implements OnInit {
     this.varios = [1,'Julian',true];
     this.saludo();
     */
+   //Cuarta Parte De La Practica
+    this.pro = new Producto('Tenis', 30, 'Caja', true);
+    this.inventario = [
+      new Producto('Zapatos', 5, 'Caja', true),
+      new Producto('Maquillaje', 3, 'Estuche', true),
+      new Producto('Boxer', 3, 'Bolsa', true),
+      new Producto('Jean', 2, 'Tula', true)
+    ];
    }
    /* Tercera Parte De La Practica
    saludo(){
@@ -53,14 +61,21 @@ export class ProductoComponent implements OnInit {
       console.log("Dentro del if"  + uno);
     }
     console.log("Fuera del if " + uno)*/
-    //Tercera Parte De La Practica
+    /*Tercera Parte De La Practica
     this.pro = new Producto('Tenis', 30, 'Caja', true);
     this.inventario = [
       new Producto('Zapatos', 5, 'Caja', true),
       new Producto('Maquillaje', 3, 'Estuche', true),
       new Producto('Boxer', 3, 'Bolsa', true),
       new Producto('Jean', 2, 'Tula', true)
-    ];
+    ];*/
+  }
+  //Cuarta Parte De La Practica
+  cambiarvalor1(valor: boolean){
+    this.inventario[2].estado= valor;
+  }
+  cambiarvalor2(valor: boolean){
+    this.inventario[2].estado= valor;
   }
 
 }

@@ -12,7 +12,7 @@
 <p>{{arreglo2}}</p>
 <p>{{varios}}</p>
 -->
-<!-- Tercera Parte De La Practica -->
+<!-- Tercera Parte De La Practica 
 <h2>{{nombre_componentes}}</h2>
 <section>
     <p>Productos En Descuento</p>
@@ -22,3 +22,52 @@
         <li>{{inventario[2].embalaje}}</li>
     </ul>
 </section>
+-->
+<!--Cuarta Parte De La Parctica-->
+<div style="text-align:center">
+    <h3>{{nombre_componentes}}</h3>
+    <p><strong>Producto en descuento</strong></p>
+</div>
+<button (click)="cambiarvalor1(true)">Mostrar</button>
+<hr />
+<ul *ngIf="inventario[2].estado == true">
+    <li>{{inventario[2].nombrepro}}</li>
+    <li>{{inventario[2].cantidadexi}}</li>
+    <li>{{inventario[2].embalaje}}</li>
+</ul>
+<ul *ngIf="inventario[3].estado !== false">
+    <li>{{inventario[3].nombrepro}}</li>
+    <li>{{inventario[3].cantidadexi}}</li>
+    <li>{{inventario[3].embalaje}}</li>
+</ul>
+<button (click)="cambiarvalor2(false)">Ocultar</button>
+
+<h3>Listado De Productos</h3>
+<ul>
+    <li *ngFor="let pro  of inventario">
+        <ul>
+            <li>{{pro.nombrepro}}</li>
+            <li>{{pro.cantidadexi}}</li>
+            <li>{{pro.embalaje}}</li>
+            <li *ngIf="pro.estado == true">Activo</li>
+        </ul>
+    </li>
+</ul>
+<table>
+    <thead>
+        <tr>
+            <th>Nombre Del Producto</th>
+            <th>Cantidad</th>
+            <th>Empaque</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pro of inventario; let i = index">
+            <td>{{pro.nombrepro}}</td>
+            <td>{{pro.cantidadexi}}</td>
+            <td>{{pro.embalaje}}</td>
+            <td *ngIf="pro.estado == true">Activo</td>
+        </tr>
+    </tbody>
+</table>
