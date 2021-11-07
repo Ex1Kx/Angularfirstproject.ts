@@ -28,6 +28,7 @@ export class ProductoComponent implements OnInit {
   public nombre_componentes = "Componente Producto";
   public pro!: Producto;
   public inventario!:Array<Producto>;
+  public color!:string;
 
   constructor() {
     /* Segunda Parte De La Practica
@@ -38,6 +39,7 @@ export class ProductoComponent implements OnInit {
     this.saludo();
     */
    //Cuarta Parte De La Practica
+    this.color = "green";  
     this.pro = new Producto('Tenis', 30, 'Caja', true);
     this.inventario = [
       new Producto('Zapatos', 5, 'Caja', true),

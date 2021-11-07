@@ -23,7 +23,7 @@
     </ul>
 </section>
 -->
-<!--Cuarta Parte De La Parctica-->
+<!--Cuarta Parte De La Parctica
 <div style="text-align:center">
     <h3>{{nombre_componentes}}</h3>
     <p><strong>Producto en descuento</strong></p>
@@ -71,3 +71,33 @@
         </tr>
     </tbody>
 </table>
+-->
+<!--Quinta Parte De La Practica-->
+<div style="text-align:center">
+<h3>{{nombre_componentes}}</h3>
+<h3>Color Switch</h3>
+<ul [ngSwitch]="color">
+   <li *ngSwitchCase="'red'"[ngStyle]=" {
+       'background':color,
+       'color': 'white',
+       'padding': '20px'
+   }">
+    Este Es Color Rojo</li>
+</ul>
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase="'green'"[ngStyle]=" {
+        'background':color,
+        'color': 'white',
+        'padding': '20px'
+    }">
+     Este Es Color Verde</li>
+ </ul>
+ <ul [ngSwitch]="color">
+    <li *ngSwitchCase="'pink'"[ngStyle]=" {
+        'background':color,
+        'color': 'white',
+        'padding': '20px'
+    }">
+     Este Es Color Rosado</li>
+ </ul>
+</div>
